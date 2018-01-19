@@ -1,0 +1,26 @@
+body {
+    font-size: 1.5em;
+    font-family: Courier New, Courier, monospace;
+}
+
+header {
+    border: 1px solid dodgerblue;
+    border-radius: 15%;
+}
+
+#navbar {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row; /* this is the default but i wanted to state it for reference */
+}
+
+.nav-item {
+    margin: 1em;
+    padding: .5em;
+    border: 1px solid dodgerblue;
+    border-radius: 15px;
+}
+
+.nav-item a {
+    text-decoration: none;  /* googled how to remove stubborn underline. orig had this declaration under nav-item but it didn't work there. */
+}
