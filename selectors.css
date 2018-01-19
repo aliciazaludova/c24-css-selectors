@@ -17,8 +17,8 @@ header {
 .nav-item {
     margin: 1em;
     padding: .5em;
-    border: 1px solid dodgerblue;
-    border-radius: 15px;
+    border: 1px solid dodgerblue; 
+    border-radius: 15px;  /* not in directions but bonus material :) */
     cursor: pointer; /* no effect */
 }
 
@@ -50,15 +50,34 @@ li a .active {
     color: blue;
 }
 
-.standout-3 {
+.standout + h4 {  /* initially had separate class here and the following declaration but learned about adjacent sibling combinator selector + changed it. */
     background-color: red;
 }
 
-.standout-4 {
+.standout-2 + h4 {
     background-color: blue;
 }
 
-.grandparent h4 {
+.grandparent > h4 {  /* ah, child combinator selector */
     border: 1px solid dodgerblue;
     border-radius: 15px;
+}
+
+.promo {
+    font-weight: 900;
+    color: gold;
+}
+
+.promo .disabled {  /* was not overridden by the above so made separate declaration to include .disabled for "May". is there another way to do this? */
+    font-weight: 900;
+    color: gold;
+    text-decoration: none;
+}
+
+a .promo .disabled {
+    text-decoration: underline; /* again, this changes the stubborn blue to the same color as the text */
+}
+
+input {
+    height: 25px;
 }
