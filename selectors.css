@@ -19,8 +19,46 @@ header {
     padding: .5em;
     border: 1px solid dodgerblue;
     border-radius: 15px;
+    cursor: pointer; /* no effect */
 }
 
 .nav-item a {
     text-decoration: none;  /* googled how to remove stubborn underline. orig had this declaration under nav-item but it didn't work there. */
+}
+
+.disabled {
+    color: grey;
+}
+
+a .disabled {
+    color: purple;
+}
+
+.active {
+    color: yellow;
+}
+
+li a .active {
+    text-decoration: underline; /* not sure if this entire band of selectors is necessary but i need to move on. it works for now to make the underline yellow and not the stubborn blue. */
+}
+
+.standout {
+    color: red;
+}
+
+.standout-2 {
+    color: blue;
+}
+
+.standout-3 {
+    background-color: red;
+}
+
+.standout-4 {
+    background-color: blue;
+}
+
+.grandparent h4 {
+    border: 1px solid dodgerblue;
+    border-radius: 15px;
 }
